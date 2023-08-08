@@ -10609,7 +10609,7 @@ static int GetRecordHeader(WOLFSSL* ssl, word32* inOutIdx,
                 }
             }
 #endif
-            WOLFSSL_MSG("Unknown Record Type");
+            WOLFSSL_MSG_EX("Unknown Record Type: %x", rh->type);
             WOLFSSL_ERROR_VERBOSE(UNKNOWN_RECORD_TYPE);
             return UNKNOWN_RECORD_TYPE;
     }
